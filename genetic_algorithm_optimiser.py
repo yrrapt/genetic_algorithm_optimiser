@@ -57,7 +57,7 @@ class genetic_algorithm_optimiser:
 		Loop through each parameter creating random values
 		each parameter is limited to the increment/resolution specified
 		"""
-		random_number = random.random() * ( parameter["high"] - parameter["low"] ) + parameter["low"]
+		random_number = random.random() * float(( parameter["high"] - parameter["low"] ) + parameter["low"])
 		rounded_number = parameter["increment"] * round( random_number / parameter["increment"] )
 		return rounded_number
 
